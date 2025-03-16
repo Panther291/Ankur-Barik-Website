@@ -1,108 +1,153 @@
-/* :: 19.0 Contact Area */
-.mona-contact-area {
-  position: relative;
-  z-index: 1;
+/*=================== contact banner start ====================*/
 
-  .google-maps {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 650px;
-    @media #{$breakpoint-xs} {
-      height: 280px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  }
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
+.contact-info{
+  margin-bottom: 25px;
 
-.single-contact-card {
-  position: relative;
-  z-index: 1;
-  text-align: center;
+  &__icon{
+    margin-right: 20px;
 
-  h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    @media #{$breakpoint-xs} {
-      font-size: 24px;
+    i,span{
+      color: #8f9195;
+      font-size: 27px;
     }
   }
 
-  h6 {
-    font-size: 18px;
-    margin-bottom: 0;
-    color: #333;
-    line-height: 1.5;
-    font-weight: 400;
-    @media #{$breakpoint-xs} {
-      font-size: 14px;
-    }
-  }
-}
+  .media-body{
 
-.casting-form-thumbnail {
-  img {
-    width: 100%;
-  }
-}
-
-.mona-contact-form {
-  position: relative;
-  z-index: 1;
-
-  .contact-heading {
-    margin-bottom: 20px;
-
-    h2 {
-      display: block;
-      margin-bottom: 15px;
-      font-size: 48px;
-      @media #{$breakpoint-lg} {
-        font-size: 30px;
-      }
-      @media #{$breakpoint-md} {
-        font-size: 36px;
-      }
-      @media #{$breakpoint-xs} {
-        font-size: 24px;
-      }
-    }
-
-    p {
+    h3{
+      font-size: 16px;
       margin-bottom: 0;
       font-size: 16px;
-      @media #{$breakpoint-xs} {
-        font-size: 14px;
+      color: #2a2a2a;
+      a{
+        &:hover{
+          color: $theme-color2;
+        }
       }
     }
+
+    p{
+      color: #8a8a8a;
+    }
+  }
+}
+/*=================== contact banner end ====================*/
+
+
+/*=================== contact form start ====================*/
+.contact-title{
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form-contact{
+
+  label{
+    font-size: 14px;
   }
 
-  label {
-    font-size: 16px;
-    color: $secondary;
-    display: block;
-    margin-bottom: 15px;
+  .form-group{
+    margin-bottom: 30px;
   }
 
-  .form-control {
-    width: 100%;
-    height: 50px;
-    padding: 0 20px;
-    border-radius: 0;
+  .form-control{
+    border: 1px solid #e5e6e9;
+    border-radius: 0px;
+    height: 48px;
+    padding-left: 18px;
+    font-size: 13px;
+    background: transparent;
 
-    &:focus {
+    &:focus{
+      outline: 0;
       box-shadow: none;
-      border-color: $primary;
+    }
+
+    &::placeholder{
+      font-weight: 300;
+      color: #999999;
     }
   }
 
-  textarea.form-control {
-    height: 110px;
-    padding: 20px;
+  textarea{
+    border-radius: 0px;
+    height: 100% !important;
+  }
+
+  // button{
+  //   border: 0;
+  // }
+}
+
+/*=================== contact form end ====================*/
+
+/* Contact Success and error Area css
+============================================================================================ */
+
+
+.modal-message {
+    .modal-dialog {
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) !important;
+        margin: 0px;
+        max-width: 500px;
+        width: 100%;
+        .modal-content {
+            .modal-header {
+                text-align: center;
+                display: block;
+                border-bottom: none;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                .close {
+                    position: absolute;
+                    right: -15px;
+                    top: -15px;
+                    padding: 0px;
+                    color: #fff;
+                    opacity: 1;
+                    cursor: pointer;
+                }
+                h2 {
+                    display: block;
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.contact-section{
+  padding: 130px 0 100px;
+  @media #{$tab}{
+    padding: 70px 0 40px;
+  }
+  @media #{$medium_device}{
+    padding: 80px 0 50px;
+  }
+  .btn_2{
+    background-color:#191d34;
+    padding: 18px 60px;
+    border-radius: 50px;
+    margin-top: 0;
+    &:hover{
+      background-color: $theme-color2;
+      
+    }
   }
 }
+
+

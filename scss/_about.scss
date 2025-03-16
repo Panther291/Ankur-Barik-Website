@@ -1,202 +1,95 @@
-/* :: 12.0 About CSS */
-
-.about-us-thumbnail {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  width: 100%;
-
-  img {
-    width: 100%;
-    @include transition-duration(800ms);
-  }
-
-  .line {
-    width: 100px;
-    height: 15px;
-    background-color: $primary;
-    position: absolute;
-    z-index: 10;
-    top: -15px;
-    right: -15px;
-    opacity: 0;
-    visibility: hidden;
-    @include transition-duration(300ms);
-
-    &::after {
-      content: '';
-      height: 100px;
-      width: 15px;
-      background-color: $primary;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 10;
+.about_me{
+    padding-top: 75px;
+    padding-bottom: 150px;
+    position: relative;
+    @media #{$mobile_device} {
+        padding-top: 0;
+        padding-bottom: 0;
     }
-  }
-
-  .line2 {
-    width: 100px;
-    height: 15px;
-    background-color: $primary;
-    position: absolute;
-    z-index: 10;
-    bottom: -15px;
-    left: -15px;
-    opacity: 0;
-    visibility: hidden;
-    @include transition-duration(300ms);
-
-    &::after {
-      content: '';
-      height: 100px;
-      width: 15px;
-      background-color: $primary;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 10;
+    @media #{$mid_device} {
+        padding-bottom: 100px;
     }
-  }
-
-  &:focus,
-  &:hover {
-    .line {
-      opacity: 1;
-      visibility: visible;
-      top: 0;
-      right: 0;
+    .about_large_title{
+        font-weight: 800;
+        color: #F5F6F7;
+        font-size: 235px;
+        position: absolute;
+        left: 21%;
+        top: 0;
+        line-height: 1;
     }
+    .about_e_details{
+        @media #{$mobile_device} {
+            margin-bottom: 30px;
+        }
+        h3{
+            font-size: 50px;
+            font-weight: 700;
+            color: #001D38;
+        }
+        p{
+            font-size: 15px;
+            font-weight: 400;
+            color: #727272;
+            margin-top: 20px;
+            margin-bottom: 36px;
+        }
+        .download_cv{
+            a{
 
-    .line2 {
-      opacity: 1;
-      visibility: visible;
-      bottom: 0;
-      left: 0;
+            }
+        }
     }
-  }
+    .about_img{
+        position: relative;
+        .color_pattern {
+            position: absolute;
+            right: -80px;
+            top: -123px;
+            z-index: -1;
+            @media #{$mid_device} {
+                right: 0;
+            }
+            @media #{$large_device} {
+                right: 0;
+            }
+        }
+        .my_Pic{
+            img{
+                width: 100%;
+            }
+        }
+
+    }
 }
 
-.about-us-content {
-  position: relative;
-  z-index: 1;
-  padding-left: 10%;
-  @media #{$breakpoint-lg} {
-    padding-left: 0;
-  }
-  @media #{$breakpoint-md} {
-    padding-left: 0;
-  }
-  @media #{$breakpoint-xs} {
-    padding-left: 0;
-  }
-
-  h2 {
-    font-size: 48px;
-    margin-bottom: 15px;
-    line-height: 1.3;
-    @media #{$breakpoint-lg} {
-      font-size: 28px;
+.project_area{
+    padding-bottom: 150px;
+    @media #{$mobile_device} {
+        padding-bottom: 50px;
     }
-    @media #{$breakpoint-md} {
-      font-size: 30px;
+    .projects_thumb{
+        img{
+            width: 100%;
+        }
     }
-    @media #{$breakpoint-xs} {
-      font-size: 30px;
+    .projects_info{
+        padding-left: 68px;
+        @media #{$mobile_device} {
+            padding-left: 0;
+            margin: 20px 0;
+        }
+        h3{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 62px;
+            margin-bottom: 0;
+        }
+        p{
+            font-size: 15px;
+            line-height: 28px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
     }
-  }
-
-  p {
-    margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.service-area {
-  position: relative;
-  z-index: 1;
-  border-top: 1px solid $border;
-  text-align: center;
-  padding-top: 50px;
-
-  i {
-    font-size: 42px;
-    margin-bottom: 30px;
-    color: $primary;
-    display: block;
-  }
-
-  h5 {
-    @include transition-duration(500ms);
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 16px;
-    margin-bottom: 0;
-  }
-
-  &:focus,
-  &:hover {
-    h5 {
-      color: $primary;
-    }
-  }
-}
-
-.single-benefits-area {
-  position: relative;
-  z-index: 1;
-
-  .benefits-icon {
-    @include flex(0 0 70px);
-    max-width: 70px;
-    width: 70px;
-
-    i {
-      color: $primary;
-      font-size: 42px;
-    }
-  }
-
-  .benefits-content {
-    h5 {
-      font-size: 22px;
-    }
-
-    p {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.mona-video-area {
-  position: relative;
-  z-index: 1;
-
-  .video-play-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -25px;
-    margin-left: -25px;
-    z-index: 99;
-    padding: 0;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: $primary;
-    color: $white;
-    line-height: 50px;
-
-    &:focus,
-    &:hover {
-      box-shadow: none;
-      background-color: $heading;
-    }
-  }
 }

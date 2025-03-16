@@ -1,133 +1,93 @@
-/* :: 18.0 Footer CSS */
-
-.footer-area {
-  position: relative;
-  z-index: 1;
-  background-color: $footer-color;
-}
-
-.single-footer-widget {
-  position: relative;
-  z-index: 1;
-
-  .widget-title {
-    color: $heading;
-    margin-bottom: 20px;
-    display: block;
-    font-weight: 600;
-  }
-
-  p {
-    color: $text;
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  .footer-social-info {
-    a {
-      display: inline-block;
-      color: $white;
-      margin-right: 5px;
-      background-color: $primary;
-      width: 40px;
-      height: 40px;
-      border-radius: 20px;
-      text-align: center;
-      line-height: 40px;
-
-      &.facebook {
-        background-color: #4c60ac;
-      }
-
-      &.twitter {
-        background-color: #00bae3;
-      }
-
-      &.pinterest {
-        background-color: #d91a18;
-      }
-
-      &.instagram {
-        background-color: #0085d7;
-      }
-
-      &.youtube {
-        background-color: #e20000;
-      }
-      @media #{$breakpoint-lg} {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 14px;
-      }
-    }
-  }
-
-  .our-link {
-    position: relative;
-    z-index: 1;
-    @include display-flex(flex);
-    @include flex-wrap(wrap);
-
-    li {
-      @include flex(0 0 50%);
-      max-width: 50%;
-      width: 50%;
-
-      a {
-        font-size: 14px;
-        color: $text;
-        margin-bottom: 17px;
-        display: block;
-        font-weight: 500;
-
-        &:focus,
-        &:hover {
-          color: $heading;
+.footer{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .footer_top{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background: #001D38;
+        @media #{$mobile_device} {
+            padding-top: 50px;
+            padding-bottom: 30px;
         }
-      }
-
-      &:last-child {
-        a {
-          margin-bottom: 0;
+        @media #{$tablet_device} {
+            padding-top: 50px;
+            padding-bottom: 60px;
         }
-      }
+        .menu_links{
+            ul{
+                li{
+                    display: inline-block;
+                    margin-right: 46px;
+                    @media #{$mobile_device} {
+                        margin-right: 20px;
+                    }
+                    a{
+                        color: #fff;
+                        font-size: 15px;
+                        font-weight: 500;
+                        &:hover{
+                            color:#615CFD ;
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
-
-  .footer-content {
-    position: relative;
-    z-index: 1;
-
-    h4 {
-      color: $secondary;
-      margin-bottom: 10px;
+    .copy-right_text{
+        padding-bottom: 30px;
+        background: #001D38;
+        .footer_border{
+            padding-bottom: 30px;
+            border-top: 1px solid #334A60;
+        }
+        .copy_right{
+            font-size: 13px;
+            color:#C7C7C7;
+            margin-bottom: 0;
+            font-weight: 400;
+            @media #{$mobile_device} {
+                font-size: 13px;
+            }
+            a{
+                color: #5DB2FF;
+            }
+        }
     }
+    .socail_links{
+        // margin-top: 47px;
+        text-align: right;
+        @media #{$mobile_device} {
+            // margin-top: 30px;
+            text-align: left;
+            margin-top: 30px;
+        }
+        ul{
+            li{
+                display: inline-block;
 
-    h6 {
-      color: $secondary;
-      margin-bottom: 0;
+                a{
+                    color: #fff;
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    text-align: center;
+                    background: transparent;
+                    @include border-radius(50%);
+                    line-height: 40px !important;
+                    margin-right: 7px;
+                    color: #FFFFFF;
+                    line-height: 40px !important;
+                    border: 1px solid #334A60;
+                    font-size: 15px;
+                 &:hover{
+                     color: #fff !important;
+                     background: #615CFD;
+                     border: 1px solid #615CFD;
+                 }
+                }
+            }
+        }
     }
-  }
-}
-
-.copywrite-text {
-  position: relative;
-  z-index: 1;
-  margin-top: 20px;
-
-  p {
-    font-size: 16px;
-    color: $secondary;
-    margin-bottom: 0;
-
-    a {
-      color: $secondary;
-
-      &:focus,
-      &:hover {
-        color: $primary;
-      }
-    }
-  }
 }
