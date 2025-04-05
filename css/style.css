@@ -9995,6 +9995,12 @@ h6,
   /* Optional: Add filter effects if necessary */
   backdrop-filter: invert(100%);
 }
+@media only screen and (max-width: 1500px) {
+  .circle{
+    display: none;
+  }
+  
+}
   html{
   cursor: default;
 }
