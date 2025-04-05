@@ -9982,3 +9982,19 @@ h6,
   padding: 0;
   list-style-type: none;
 }
+/* Circle element styling */
+/* Circle element styling */
+.circle {
+  /* background-color: black; */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 2000;
+  pointer-events: none;
+  /* Optional: Add filter effects if necessary */
+  backdrop-filter: invert(100%);
+}
+  html{
+  cursor: default;
+}

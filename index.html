@@ -25,6 +25,8 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <div class="circle"></div>
+    
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
@@ -590,5 +592,23 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+<script>
+    const circles = document.querySelectorAll('.circle');
+    let currentCircle = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        circles[currentCircle].style.left = `${x}px`;
+        circles[currentCircle].style.top = `${y}px`;
+        circles[currentCircle].style.transition = 'left 0.1s, top 0.1s';
+        circles[currentCircle].style.transform = 'translate(-50%, -50%)';
+        circles[currentCircle].style.opacity = 1;
+        circles[currentCircle].style.pointerEvents = 'none';
+
+        currentCircle = (currentCircle + 1) % circles.length;
+    });
+</script>
 
 </html>
